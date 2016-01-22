@@ -1,7 +1,7 @@
 # -*- conf -*-
 
 FROM ubuntu:14.04
-MAINTAINER Maciej Pasternacki <maciej@3ofcoins.net>
+MAINTAINER Jeremy Goodrum <jeremy.b.goodrum@gmail.com>
 
 EXPOSE 80 443
 VOLUME /var/opt/opscode
@@ -17,5 +17,6 @@ COPY knife.rb /etc/chef/knife.rb
 COPY backup.sh /usr/local/bin/chef-server-backup
 
 ENV KNIFE_HOME /etc/chef
+ENV MANAGEMENT false
 
 CMD [ "/opt/opscode/embedded/bin/ruby", "/init.rb" ]
