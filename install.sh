@@ -13,15 +13,13 @@ apt-get install -q --yes logrotate vim-nox hardlink wget ca-certificates apt-tra
 # Download and install Chef's packages
 wget -nv https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/trusty/chef-server-core_12.3.1-1_amd64.deb
 wget -nv https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/trusty/chef_12.6.0-1_amd64.deb
-wget -nv https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/trusty/chef-manage_2.1.1-1_amd64.deb
 
 sha1sum -c - <<EOF
 b98fab36311ce8237baa60b73037c6c6d0e49c7c  chef-server-core_12.3.1-1_amd64.deb
 8465cb169320e3c913a45109597e449f289549ac  chef_12.6.0-1_amd64.deb
-b6c87fd29d8af63413eba1b437dcae58712ff661  chef-manage_2.1.1-1_amd64.deb
 EOF
 
-dpkg -i chef-server-core_12.3.1-1_amd64.deb chef_12.6.0-1_amd64.deb chef-manage_2.1.1-1_amd64.deb
+dpkg -i chef-server-core_12.3.1-1_amd64.deb chef_12.6.0-1_amd64.deb
 
 # Extra setup
 rm -rf /etc/opscode

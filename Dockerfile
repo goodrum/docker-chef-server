@@ -17,6 +17,6 @@ COPY knife.rb /etc/chef/knife.rb
 COPY backup.sh /usr/local/bin/chef-server-backup
 
 ENV KNIFE_HOME /etc/chef
-ENV MANAGEMENT false
+ENV PUBLIC_URL ""
 
 CMD [ "/opt/opscode/embedded/bin/ruby", "/init.rb" ]
