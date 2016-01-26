@@ -1,10 +1,11 @@
 # -*- conf -*-
 
-FROM ubuntu:14.04
+FROM goodrum/docker-chef-server:12.3.1
 MAINTAINER Jeremy Goodrum <jeremy.b.goodrum@gmail.com>
 
 EXPOSE 80 443
 VOLUME /var/opt/opscode
+VOLUME /var/opt/chef-manage
 
 COPY install.sh /tmp/install.sh
 
